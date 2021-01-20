@@ -42,6 +42,4 @@ All going well, the script's output will be similar to this:
 
 ## Disclaimer
 
-This script is provided as a quick demonstration **only**.  It is not written to represent any level of production-ready code and will require extensive modification before any code is used in a production environment.
-
-While you are welcome to take and modify anything you like from this demo script, please make sure you add appropriate exception handling and error-checking before running it in a production environment.
+Please see the `.disclaimer` file that is distributed with this repository.
