@@ -1,0 +1,10 @@
+{
+    "name": "nutanix/pc_category_management",
+    "description": "Create Nutanix Prism Central categories keys and values based on JSON file",
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "vlucas/phpdotenv": "^5.2"
+    },
+    "license": "MIT"
+}
