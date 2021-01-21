@@ -68,8 +68,14 @@ $res = $client->request('POST', 'https://' . $pc_ip . ':' . $pc_port . '/api/nut
 ]);
 
 # check the results of the request
-echo("HTTP status code: " . $res->getStatusCode() . "\n");
-# echo("Response body: " . $res->getBody()->getContents() . "\n");
+echo("BATCH request HTTP status code: " . $res->getStatusCode() . "\n");
+$json_response = json_decode($res->getBody()->getContents());
+echo("There are " . count($json_response->api_response_list) . " responses from this request.\n");
+foreach($json_response as $response_item) {
+	foreach($response_item as $response_details) {
+		echo("Response code: " . $response_details->status . " | path_and_params: " . $response_details->path_and_params . "\n");
+	}
+}
 
 # start building the next BATCH request
 echo("Building the BATCH request payload that will create the category values ...\n");
@@ -121,5 +127,11 @@ $res = $client->request('POST', 'https://' . $pc_ip . ':' . $pc_port . '/api/nut
 ]);
 
 # check the results of the request
-echo("HTTP status code: " . $res->getStatusCode() . "\n");
-# echo("Response body: " . $res->getBody()->getContents() . "\n");
+echo("BATCH request HTTP status code: " . $res->getStatusCode() . "\n");
+$json_response = json_decode($res->getBody()->getContents());
+echo("There are " . count($json_response->api_response_list) . " responses from this request.\n");
+foreach($json_response as $response_item) {
+	foreach($response_item as $response_details) {
+		echo("Response code: " . $response_details->status . " | path_and_params: " . $response_details->path_and_params . "\n");
+	}
+}

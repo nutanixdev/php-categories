@@ -20,6 +20,8 @@ This small demo will create a collection of Prism Central category keys and valu
   php ./categories.php
   ```
 
+**Note**: This script was developed on a Linux system.  Occurrences of `\n` that indicate a newline/carriage return may need to be adjusted on OS X and Windows systems.
+
 ## Additional Info
 
 This script does not require a verified SSL connection to Prism Central.  If you have configured Prism Central with a valid SSL certificate and require SSL certificate verification in your environment, please change all occurrences of this:
@@ -35,8 +37,6 @@ to this:
 ```
 
 ## Screenshot
-
-All going well, the script's output will be similar to this:
 
 ![Screenshot of PHP category management script being run](./screenshot.png?raw=true)
 
